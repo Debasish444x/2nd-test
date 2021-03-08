@@ -12,6 +12,6 @@ class Fetch_data extends Controller
         // return Crud_model::all();
         // return Crud_model::find(2);
         //   Crud_model::where('user_name','sayan_1')->get();
-        return Crud_model::where('id','1')->update(array('name'=>'debasish_2'));
+        return Crud_model::where('id','2')->update(array('name'=>'debasish_2'));
     }
 }
