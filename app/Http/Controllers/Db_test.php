@@ -9,7 +9,8 @@ class Db_test extends Controller
     function select()
     {
         //we can use raw to write the query manually;
-        $data2=DB::select(DB::raw('select * from admin'));
+       // $data2=DB::select(DB::raw('select * from admin'));
+        $data3=DB::select(DB::raw('select * from admin'));
 
         // $data=DB::table('admin')->select()->get(); //we can get all data from the hole table by using this;
         // $data=DB::table('admin')->where('user_name','arnab_1')->where('id','!=',2)->get();
@@ -21,10 +22,10 @@ class Db_test extends Controller
         // foreach($data as $row){
         //     echo $row->name,$row->id;
         // }
-        
+
         //  $data=DB::table('admin')->select('id')->get(); //if we need single attribute values then we can use this
         $data=DB::table('admin')->select(array('id','name'))->get(); //if we need multiple attribute values then we have to use array to get the values;
-      
+
           foreach($data as $row){
             echo $row->name,$row->id;
         }
